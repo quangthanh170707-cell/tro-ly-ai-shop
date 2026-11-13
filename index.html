@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Trợ lý AI bán hàng cho shop thời trang – Prototype</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>Trợ lý AI bán hàng và chăm sóc khách hàng – bản prototype cho shop thời trang</h1>
+<p>Dữ liệu cửa hàng là dữ liệu mẫu. AI chỉ trả lời từ dữ liệu này và chuyển cho nhân viên khi không chắc, khi có khiếu nại hoặc hoàn tiền.</p></header>
+<main>
+<section class="card" id="chat" aria-label="Cửa sổ trò chuyện của khách">
+<h2>Khách hàng nhắn tin (giao diện giống Messenger/Zalo)</h2>
+<div id="log" aria-live="polite"></div>
+<div class="chips" id="chips"></div>
+<form id="f"><input id="q" autocomplete="off" placeholder="Nhập tin nhắn của khách…" aria-label="Tin nhắn"><button class="go">Gửi</button></form>
+</section>
+<div class="row">
+<section class="card"><h2>Bảng điều khiển của chủ shop</h2>
+<div class="tiles"><div class="tile"><b id="t1">0</b><span>Tin nhắn khách</span></div><div class="tile"><b id="t2">0</b><span>AI tự xử lý</span></div><div class="tile"><b id="t3">0</b><span>Chuyển nhân viên</span></div><div class="tile"><b id="t4">0 ms</b><span>Phản hồi trung vị</span></div></div>
+<div class="box mut" id="mode"></div></section>
+<section class="card"><h2>Dữ liệu AI đã dùng cho câu vừa rồi</h2><div class="box" id="src"><span class="mut">Gửi một tin nhắn để xem AI lấy thông tin từ đâu.</span></div></section>
+<section class="card"><h2>Hộp thư nhân viên (ca chuyển người, kèm tóm tắt)</h2><div class="box" id="inbox"><span class="mut">Chưa có ca nào.</span></div></section>
+<section class="card"><h2>Nhật ký và kiểm soát</h2><div class="box" id="audit"><span class="mut">Mỗi câu trả lời được ghi lại: ý định, nguồn dữ liệu, thời gian, ai xử lý.</span></div></section>
+<section class="card"><h2>Kho mẫu của shop (nguồn sự thật của AI)</h2><div class="wrap"><table id="cat"></table></div><p class="box mut">Chính sách mẫu: đổi size trong 7 ngày nếu còn tem mác; giao 1–2 ngày nội thành, 3–5 ngày tỉnh; phí ship 25.000đ nội thành, 35.000đ ngoại tỉnh, miễn phí từ 599.000đ.</p></section>
+</div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
